@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("/Agendamento/assests/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.9;
+}
+
+.container {
+  background-color: #080b16;
+  color: #ffffff;
+  border-radius: 14px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0px -1px 17px -4px rgba(237, 25, 25, 0.45);
+  padding: 30px 20px;
+  display: block;
+}
+
+.header h2 {
+  text-align: center;
+}
+
+.form {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-content {
+  margin-bottom: 15px;
+}
+.form-content label {
+  display: block;
+  margin-bottom: 8px;
+}
+.form-content input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+  border: 0;
+  padding: 5px 10px;
+  margin-bottom: 8px;
+}
+.form-content a {
+  color: #d34040;
+  font-size: 14px;
+}
+.form-content select {
+  display: block;
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+  border: 0;
+  padding: 5px;
+  margin-bottom: 8px;
+}
+
+.form-content-horario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-content-horario label {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.form-content-horario .times {
+  display: flex;
+  gap: 5px;
+}
+.form-content-horario .label-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid #353436;
+  color: #ffffff;
+  border-radius: 8px;
+  transition: background-color 0.8s;
+  margin-bottom: 5px;
+}
+.form-content-horario .label {
+  padding: 8px 20px 5px 20px;
+  cursor: pointer;
+}
+.form-content-horario .label-content:hover {
+  background-color: #d34040;
+  border: 1px solid #ffffff;
+}
+.form-content-horario .label-content input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.form-content-horario .label-content:has(:checked) {
+  background-color: #d34040;
+  border: 1px solid #ffffff;
+}
+
+.bt-schedule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.bt-schedule input {
+  background-color: #d94140;
+  border: 0;
+  padding: 8px;
+  width: 80%;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #d94140;
+  transition: background-color 0.8s;
+}
+.bt-schedule input:hover {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 350px;
+  }
+  .form-content-horario {
+    max-width: 350px;
+  }
+  .times {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.finish {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.finish .bt-back {
+  margin-top: 15px;
+}
+.finish .bt-back a {
+  background-color: #d94140;
+  padding: 8px;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #d94140;
+  border-radius: 5px;
+  padding: 8px 30px;
+  transition: background-color 0.8s;
+  text-decoration: none;
+}
+.finish .bt-back a:hover {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}/*# sourceMappingURL=style_ag.css.map */

@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+@import "partials/colors";
+
+body {
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e),
+    url("/Agendamento/assests/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.9;
+}
+
+.container {
+  background-color: #080b16;
+  color: $white-normal;
+  border-radius: 14px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0px -1px 17px -4px rgba(237, 25, 25, 0.45);
+  padding: 30px 20px;
+  display: block;
+}
+.header {
+  h2 {
+    text-align: center;
+  }
+}
+.form {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.form-content {
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  input {
+    display: block;
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    border: 0;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: $red-light;
+    font-size: 14px;
+  }
+  select {
+    display: block;
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    border: 0;
+    padding: 5px;
+    margin-bottom: 8px;
+  }
+}
+.form-content-horario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  label {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .times {
+    display: flex;
+    gap: 5px;
+  }
+  .label-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid $black-light;
+    color: $white-normal;
+    border-radius: 8px;
+    transition: background-color 0.8s;
+    margin-bottom: 5px;
+  }
+  .label {
+    padding: 8px 20px 5px 20px;
+    cursor: pointer;
+  }
+  .label-content:hover {
+    background-color: $red-light;
+    border: 1px solid $white-normal;
+  }
+
+  .label-content input[type="radio"] {
+    appearance: none;
+  }
+  .label-content:has(:checked) {
+    background-color: $red-light;
+    border: 1px solid $white-normal;
+  }
+}
+
+.bt-schedule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+
+  input {
+    background-color: $red-normal;
+    border: 0;
+    padding: 8px;
+    width: 80%;
+    color: $white-normal;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid $red-normal;
+    transition: background-color 0.8s;
+  }
+  input:hover {
+    background-color: transparent;
+    border: 1px solid $white-normal;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 350px;
+  }
+  .form-content-horario {
+    max-width: 350px;
+  }
+  .times {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.finish {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .bt-back {
+    margin-top: 15px;
+    a {
+      background-color: $red-normal;
+      padding: 8px;
+      border: 0;
+      color: $white-normal;
+      cursor: pointer;
+      border: 1px solid $red-normal;
+      border-radius: 5px;
+      padding: 8px 30px;
+      transition: background-color 0.8s;
+      text-decoration: none;
+    }
+    a:hover {
+      background-color: transparent;
+      border: 1px solid $white-normal;
+    }
+  }
+}
